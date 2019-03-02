@@ -5,3 +5,6 @@ phases:
       - ls
       - pwd
       - aws s3 cp --recursive $(pwd) s3://curso-lima/
+artifacts:
+  files:
+    - '**/*'
