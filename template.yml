@@ -13,11 +13,11 @@ Resources:
         DeletionPolicy: Delete
         Properties:
             InstanceInitiatedShutdownBehavior: terminate
-            SubnetId: subnet-429c8d6d
+            SubnetId: subnet-1d8be041 # se extrae de la vpc
             InstanceType: "t2.micro"
             ImageId: !FindInMap [ RegionMap, !Ref "AWS::Region" , UbuntuAmi ]
             SecurityGroupIds:
-                - "sg-0c1b5430204e8ccd3"
+                - "sg-73410c37" #grupo de seguridad de ma misma vps
             KeyName: "curso-lima"
             Tags:
             - Key: Name
